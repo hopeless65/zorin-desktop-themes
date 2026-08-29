@@ -3332,3 +3332,500 @@ StScrollBar {
   color: #123354;
   border-radius: 4.5px;
   border-width: 1em; }
+
+/* =====================================================================
+ * ZorinBlue-Light GNOME Shell 48 compatibility layer
+ * Ported from the Zorin Desktop Themes 5.2.3 GNOME 46 stylesheet.
+ * GNOME Shell 48 introduced/adjusted Quick Settings, notification and
+ * dialog widgets. The rules below keep the Zorin visual language while
+ * leaving geometry handled by the GNOME 48 shell where possible.
+ * ===================================================================== */
+
+/* GNOME 48 Quick Settings */
+.quick-settings {
+  background-color: #eaf0f6;
+  color: #123354;
+  padding: 12px;
+  border-radius: 18px;
+}
+
+.quick-settings-grid {
+  spacing-rows: 12px;
+  spacing-columns: 12px;
+}
+
+.quick-toggle,
+.quick-menu-toggle,
+.quick-toggle-has-menu {
+  color: #123354;
+  background-color: #dae2ea;
+  border-radius: 12px;
+  border: none;
+  transition-duration: 150ms;
+}
+
+.quick-toggle:hover,
+.quick-menu-toggle:hover,
+.quick-toggle-has-menu:hover {
+  background-color: #cfd8e2;
+}
+
+.quick-toggle:checked,
+.quick-toggle-has-menu:checked {
+  color: white;
+  background-color: #15a6f0;
+  background-gradient-direction: horizontal;
+  background-gradient-start: #029be9;
+  background-gradient-end: #22c5fd;
+}
+
+.quick-toggle:checked:hover,
+.quick-toggle:checked:active,
+.quick-toggle-has-menu:checked:hover,
+.quick-toggle-has-menu:checked:active {
+  background-gradient-direction: none;
+  background-color: #15a6f0;
+}
+
+.quick-toggle StIcon,
+.quick-menu-toggle StIcon,
+.quick-toggle-has-menu StIcon {
+  color: inherit;
+}
+
+.quick-toggle .quick-toggle-title,
+.quick-toggle-has-menu .quick-toggle-title {
+  font-weight: bold;
+}
+
+.quick-toggle .quick-toggle-subtitle,
+.quick-toggle-has-menu .quick-toggle-subtitle {
+  color: rgba(18, 51, 84, 0.65);
+}
+
+.quick-toggle:checked .quick-toggle-subtitle,
+.quick-toggle-has-menu:checked .quick-toggle-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.quick-slider .slider-bin {
+  background-color: #dae2ea;
+  border-radius: 999px;
+}
+
+.quick-slider .slider-bin:hover {
+  background-color: #cfd8e2;
+}
+
+.quick-slider .slider-bin:focus {
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+}
+
+.quick-settings-system-item > StBoxLayout {
+  spacing: 12px;
+}
+
+.quick-settings-system-item .power-item {
+  color: #123354;
+  background-color: transparent;
+}
+
+.quick-toggle-menu {
+  color: #123354;
+  background-color: #eaf0f6;
+  border-radius: 15px;
+  margin: 12px 12px 0;
+}
+
+.quick-toggle-menu .header .icon {
+  background-color: rgba(18, 51, 84, 0.125);
+}
+
+.quick-toggle-menu .header .icon.active {
+  color: white;
+  background-color: #15a6f0;
+}
+
+/* GNOME 48 notification/message list refinements */
+.message-list {
+  color: #123354;
+}
+
+.message {
+  color: #123354;
+  background-color: rgba(234, 240, 246, 0.78);
+  border-radius: 12px;
+  margin: 4px;
+}
+
+.message:hover,
+.message:focus {
+  background-color: #eaf0f6;
+}
+
+.message .message-header .message-source-title,
+.message .message-box .message-title {
+  color: #123354;
+}
+
+.message .message-header .event-time {
+  color: #7e92a5;
+}
+
+.notification-banner {
+  color: #123354;
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(18, 51, 84, 0.075);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* GNOME 48 modern system/dialog surfaces */
+.modal-dialog,
+.message-dialog-content,
+.dialog-list {
+  color: #123354;
+}
+
+.modal-dialog {
+  background-color: #eaf0f6;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 1px rgba(18, 51, 84, 0.075);
+}
+
+.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description,
+.message-dialog-content .message-dialog-description {
+  color: rgba(18, 51, 84, 0.65);
+}
+
+/* GNOME 48 screenshot/OSD buttons */
+.screenshot-ui-show-pointer-button,
+.screenshot-ui-type-button,
+.screenshot-ui-close-button {
+  border-radius: 9px;
+}
+
+/* GNOME 48 accent-color aware controls */
+StButton:focus,
+.button:focus,
+.icon-button:focus {
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+}
+
+/* GNOME 48: end-session dialog buttons
+ * GNOME 48 replaced .modal-dialog-linked-button with
+ * .modal-dialog-button-box .modal-dialog-button.
+ */
+.modal-dialog .modal-dialog-button-box .modal-dialog-button {
+  border-radius: 9px;
+  padding: 12px;
+  font-weight: 400 !important;
+  transition-duration: 150ms;
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.075);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:focus {
+  color: #123354;
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+  background-color: rgba(20, 117, 174, 0.12125);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:hover {
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.125);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:active {
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.175);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:insensitive {
+  color: rgba(18, 51, 84, 0.4);
+  background-color: #e2e9f0;
+}
+
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child {
+  color: #f91f1f;
+  background-color: rgba(249, 31, 31, 0.075);
+  font-weight: bold !important;
+}
+
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child:focus {
+  color: #f91f1f;
+  box-shadow: inset 0 0 0 2px rgba(249, 31, 31, 0.5) !important;
+}
+
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child:hover {
+  color: #f91f1f;
+  background-color: rgba(249, 31, 31, 0.125);
+}
+
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child:active {
+  color: #f91f1f;
+  background-color: rgba(249, 31, 31, 0.175);
+}
+
+
+/* ==========================================================================
+ * ZorinBlue-Light GNOME 48 compatibility layer — v3
+ * Keeps the original Zorin 5.2.3 appearance while mapping GNOME 48 classes.
+ * ========================================================================== */
+
+/* GNOME 48 renamed the split quick-toggle classes. */
+.quick-toggle-has-menu .quick-toggle {
+  min-width: auto;
+  max-width: auto;
+}
+
+.quick-toggle-has-menu .quick-toggle:ltr {
+  border-radius: 12px 0 0 12px;
+}
+.quick-toggle-has-menu .quick-toggle:ltr > StBoxLayout {
+  padding-right: 9px;
+}
+.quick-toggle-has-menu .quick-toggle:rtl {
+  border-radius: 0 12px 12px 0;
+}
+.quick-toggle-has-menu .quick-toggle:rtl > StBoxLayout {
+  padding-left: 9px;
+}
+.quick-toggle-has-menu .quick-toggle:ltr:last-child,
+.quick-toggle-has-menu .quick-toggle:rtl:last-child {
+  border-radius: 12px;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  padding: 6px 10.5px;
+  border-width: 0;
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.075);
+  transition-duration: 150ms;
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:ltr {
+  border-radius: 0 12px 12px 0;
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:rtl {
+  border-radius: 12px 0 0 12px;
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:hover {
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.125);
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:active {
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.175);
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:focus {
+  color: #123354;
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  color: white;
+  background-color: #1ebdfa;
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
+  color: white;
+  background-color: #22c5fd;
+}
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
+  color: white;
+  background-color: #029be9;
+}
+
+.quick-toggle-has-menu .quick-toggle-separator {
+  width: 1px;
+  background-color: rgba(18, 51, 84, 0.18);
+}
+.quick-toggle-has-menu:checked .quick-toggle-separator {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Background-app row introduced/changed in newer shell versions. */
+.background-apps-quick-toggle {
+  color: #123354;
+  min-height: 2.728em;
+  background-color: rgba(18, 51, 84, 0.075);
+  border-radius: 12px;
+}
+.background-apps-quick-toggle:hover {
+  background-color: rgba(18, 51, 84, 0.125);
+}
+.background-apps-quick-toggle:active {
+  background-color: rgba(18, 51, 84, 0.175);
+}
+.background-apps-quick-toggle:focus {
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+}
+.background-apps-quick-toggle StIcon {
+  color: #123354;
+  icon-size: 16px !important;
+}
+
+/* GNOME 48 date menu / notification controls. */
+.message-list {
+  color: #123354;
+  border-color: rgba(18, 51, 84, 0.12);
+}
+.message-list .message-list-placeholder {
+  color: rgba(18, 51, 84, 0.45);
+}
+.message-list-controls {
+  padding: 12px;
+  padding-bottom: 6px;
+  spacing: 6px;
+  color: #123354;
+}
+.message-list-controls .dnd-button {
+  color: #123354;
+  border-width: 2px;
+  border-color: transparent;
+  border-radius: 32px;
+  border-style: solid;
+}
+.message-list-controls .dnd-button:focus {
+  border-color: rgba(21, 166, 240, 0.6);
+}
+
+/* GNOME 48 message groups */
+.message-notification-group {
+  spacing: 12px;
+}
+.message-notification-group .message-group-header {
+  color: #123354;
+  padding: 6px;
+}
+.message-notification-group .message-group-header .message-group-title {
+  margin: 0 4px;
+}
+.message-notification-group .message-collapse-button {
+  color: #123354;
+}
+
+/* Date-menu cards: retain the Zorin 46 white-card treatment. */
+.events-button,
+.world-clocks-button,
+.weather-button,
+.message {
+  color: #123354;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.events-button:hover,
+.world-clocks-button:hover,
+.weather-button:hover,
+.message:hover {
+  color: #123354;
+  background-color: #dae2ea;
+}
+.events-button:focus,
+.world-clocks-button:focus,
+.weather-button:focus,
+.message:focus {
+  color: #123354;
+  background-color: #f3fbfe;
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+}
+
+/* Improve contrast of secondary date-menu text without changing Zorin palette. */
+.events-button .events-box .events-title,
+.events-button .events-box .events-list .event-box .event-time,
+.events-button .events-box .events-list .event-placeholder,
+.world-clocks-button .world-clocks-header,
+.weather-button .weather-box .weather-header,
+.weather-button .weather-box .weather-grid .weather-forecast-time,
+.calendar .calendar-week-number,
+.calendar .calendar-day-heading {
+  color: #6f879d;
+}
+
+/* GNOME 48 clear button can otherwise look nearly disabled on the light menu. */
+.message-list-controls .button,
+.message-list-controls .icon-button {
+  color: #123354;
+}
+.message-list-controls .button:insensitive,
+.message-list-controls .icon-button:insensitive {
+  color: rgba(18, 51, 84, 0.45);
+  background-color: rgba(18, 51, 84, 0.05);
+}
+
+/* End-session dialog: GNOME 48 button class. */
+.modal-dialog .modal-dialog-button-box .modal-dialog-button {
+  border-radius: 9px;
+  padding: 12px;
+  font-weight: 400 !important;
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.075);
+}
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:hover {
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.125);
+}
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:active {
+  color: #123354;
+  background-color: rgba(18, 51, 84, 0.175);
+}
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:focus {
+  color: #123354;
+  box-shadow: inset 0 0 0 2px rgba(21, 166, 240, 0.5) !important;
+}
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child {
+  color: #f91f1f;
+  background-color: rgba(249, 31, 31, 0.075);
+  font-weight: bold !important;
+}
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child:hover {
+  color: #f91f1f;
+  background-color: rgba(249, 31, 31, 0.125);
+}
+.end-session-dialog .modal-dialog-button-box .modal-dialog-button:last-child:focus {
+  color: #f91f1f;
+  box-shadow: inset 0 0 0 2px rgba(249, 31, 31, 0.5) !important;
+}
+
+
+/* ==========================================================================
+ * ZorinBlue-Light GNOME 48 — v4 visual fine tuning
+ * ========================================================================== */
+
+/* Make the separator in split quick toggles less prominent. */
+.quick-toggle-has-menu .quick-toggle-separator {
+  background-color: rgba(18, 51, 84, 0.10);
+}
+.quick-toggle-has-menu:checked .quick-toggle-separator {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Date-menu column divider: retain structure, reduce visual weight. */
+.datemenu-calendar-column {
+  border-color: rgba(18, 51, 84, 0.08);
+}
+
+/* DND switch: bring GNOME 48's switch closer to the Zorin light palette. */
+.message-list-controls .dnd-button .toggle-switch {
+  color: #123354;
+  background-color: #cbd7e2;
+}
+.message-list-controls .dnd-button .toggle-switch:hover {
+  background-color: #c2d0dc;
+}
+.message-list-controls .dnd-button .toggle-switch:checked {
+  color: white;
+  background-color: #15a6f0;
+}
+.message-list-controls .dnd-button .toggle-switch:checked:hover {
+  background-color: #1ebdfa;
+}
+
+/* Disabled Clear button: subtle but intentionally recognizable as disabled. */
+.message-list-controls .button:insensitive,
+.message-list-controls .icon-button:insensitive {
+  color: rgba(18, 51, 84, 0.42);
+  background-color: rgba(18, 51, 84, 0.035);
+}
+
+/* End of v4 fine tuning. */
