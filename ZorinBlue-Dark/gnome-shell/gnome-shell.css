@@ -3825,8 +3825,8 @@ StButton:focus,
 /* Disabled Clear button: subtle but intentionally recognizable as disabled. */
 .message-list-controls .button:insensitive,
 .message-list-controls .icon-button:insensitive {
-  color: rgba(189, 230, 251, 0.42);
-  background-color: rgba(189, 230, 251, 0.035);
+  color: rgba(189, 230, 251, 0.50);
+  background-color: rgba(189, 230, 251, 0.06);
 }
 
 /* End of v4 fine tuning. */
